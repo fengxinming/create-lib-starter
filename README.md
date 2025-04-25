@@ -1,1 +1,1 @@
-# create-vite-lib-starter
+# create-lib-starter

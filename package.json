@@ -1,0 +1,68 @@
+{
+  "name": "create-lib-starter",
+  "version": "1.0.0",
+  "description": "Create your own lib project.",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "bin": "dist/index.js",
+  "engines": {
+    "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "eslint": "eslint --ext .js,.mjs,.jsx,.ts,.tsx --fix --ignore-path .eslintignore ./",
+    "prepare": "husky",
+    "prepublishOnly": "npm run build",
+    "release": "pnpm publish --no-git-checks",
+    "test": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fengxinming/create-lib-starter.git"
+  },
+  "keywords": [
+    "vite",
+    "create-vite"
+  ],
+  "author": "Jesse <fxm0016@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengxinming/create-lib-starter/issues"
+  },
+  "homepage": "https://github.com/fengxinming/create-lib-starter#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@vitest/coverage-v8": "^3.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-fe": "^2.1.2",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "tinyglobby": "^0.2.12",
+    "vite": "^6.2.6",
+    "vite-plugin-external": "^6.1.0",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.1",
+    "@types/cross-spawn": "^6.0.6",
+    "@types/figlet": "^1.7.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.14.0",
+    "cac": "^6.7.14",
+    "cross-spawn": "^7.0.6",
+    "figlet": "^1.8.0",
+    "fs-extra": "^11.3.0",
+    "tslib": "^2.8.1"
+  }
+}
